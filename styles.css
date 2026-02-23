@@ -1,208 +1,288 @@
-/* ============================= */
-/* RESET GENERAL */
-/* ============================= */
-
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ============================= */
-/* BODY */
-/* ============================= */
-
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(rgba(10,25,47,0.80), rgba(10,25,47,0.80)),
-    url("https://images.unsplash.com/photo-1581093588401-22d3c6a9e0e6?auto=format&fit=crop&w=1600&q=80");
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    color: #ffffff;
-    line-height: 1.7;
+    color: white;
+    scroll-behavior: smooth;
 }
 
-/* ============================= */
-/* NAVBAR */
-/* ============================= */
+/* Overlay oscuro */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 20, 50, 0.85), rgba(0, 30, 70, 0.9));
+    z-index: -1;
+}
 
+/* ===== NAV ===== */
 nav {
     position: fixed;
-    width: 100%;
     top: 0;
-    background: rgba(10,25,47,0.95);
-    backdrop-filter: blur(8px);
-    padding: 20px 8%;
+    width: 100%;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: rgba(0, 0, 50, 0.6);
+    backdrop-filter: blur(12px);
     z-index: 1000;
 }
 
 nav h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #ffffff;
-}
-
-nav div a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 400;
-    transition: 0.3s ease;
-}
-
-nav div a:hover {
-    color: #C9A227; /* dorado institucional */
-}
-
-/* ============================= */
-/* SECCIONES */
-/* ============================= */
-
-section {
-    min-height: 100vh;
-    padding: 140px 10% 80px 10%;
-    display: flex;
-    align-items: center;
-}
-
-/* ============================= */
-/* TARJETA GLASS */
-/* ============================= */
-
-.glass {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(14px);
-    padding: 50px;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    animation: fadeUp 1.2s ease;
-    width: 100%;
-}
-
-/* ============================= */
-/* TITULOS */
-/* ============================= */
-
-h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.4rem;
-    margin-bottom: 25px;
-    font-weight: 700;
+    font-size: 22px;
     letter-spacing: 1px;
 }
 
-h3 {
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4da3ff;
+}
+
+/* ===== SECCIONES ===== */
+
+/* INICIAN CAMBIOS AÑADIDOS */
+
+#inicio {
+    position: relative; /* Necesario para que el fondo no se escape */
+    background: linear-gradient(rgba(40, 119, 230, 0.156), rgba(6, 19, 39, 0.825)); /* El color que quieres que "traspase" */
+    overflow: hidden;
+    min-height: 100%; /* 100% del alto de la página */
+    color: white;    
+
+}
+
+#inicio::before{
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    
+   
+    background: url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0') no-repeat center center fixed;
+    background-size: cover;
+    
+    /* CONTROL DE OPACIDAD */
+    opacity: 0.2; 
+    
+    z-index: 1;
+}
+
+.glass.inicio-glass{
+    background: rgba(255, 255, 255, 0.165);
+
+}
+
+
+#sintesis{
+
+    position: relative; /* Necesario para que el fondo no se escape */
+    background: linear-gradient(rgba(3, 35, 80, 0.717), rgba(171, 205, 255, 0.305)); /* El color que quieres que "traspase" */
+    overflow: hidden;
+    min-height: 100%; /* 100% del alto de la página */
+    color: white;    
+
+}
+
+#sintesis::before{
+
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+
+    background: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    
+    /* CONTROL DE OPACIDAD */
+    opacity: 0.2; 
+    
+    z-index: 1;
+}
+
+.glass.sintesis-glass{
+
+    background: rgba(255, 255, 255, 0.17);
+
+
+}
+
+/* TERMINAN CAMBIOS AÑADIDOS  */
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 10%;
+}
+
+/* ===== TARJETAS GLASS ===== */
+.glass {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    padding: 60px;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    max-width: 1100px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s ease;
+}
+
+/* Animación visible */
+.glass.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== TITULOS ===== */
+h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    color: #C9A227;
+    font-size: 38px;
+    margin-bottom: 30px;
+    position: relative;
 }
 
-/* ============================= */
-/* PARRAFOS */
-/* ============================= */
+h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #4da3ff;
+    display: block;
+    margin-top: 10px;
+}
 
+/* ===== TEXTO ===== */
 p {
+    font-size: 18px;
+    line-height: 1.7;
     margin-bottom: 20px;
-    font-weight: 300;
-    font-size: 1.05rem;
 }
 
-/* ============================= */
-/* LISTAS */
-/* ============================= */
-
-ul {
-    margin-top: 15px;
-    padding-left: 20px;
+/* ul {
+    list-style: none;
+    margin-top: 20px;
 }
 
 ul li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    position: relative;
+    padding-left: 30px;
 }
 
-/* ============================= */
-/* BOTONES */
-/* ============================= */
+ul li::before {
+    content: "➜";
+    position: absolute;
+    left: 0;
+    color: #4da3ff;
+    font-weight: bold;
+} */
 
-button {
-    padding: 12px 25px;
-    background: #C9A227;
-    border: none;
-    border-radius: 6px;
-    font-size: 0.95rem;
+/* INCIO DE CAMBIOS */
+
+/* Contenedor Principal */
+.glass-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.enlace-title {
+    
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Grid de Cajas */
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+.card-list li {
+    flex: 1 1 280px; /* Base de 280px, crece si hay espacio */
+    max-width: 400px;
+}
+
+/* La Tarjeta (Enlace) */
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    height: 100%;
+    text-decoration: none;
+    color: white;
     font-weight: 500;
+    text-align: center;
+    line-height: 1.4;
+    
+    
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    
+    transition: all 0.3s ease;
+}
+
+/* Interacción */
+.card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* TERMINAN LOS CAMBIOS */
+
+/* ===== BOTON ===== */
+button {
+    padding: 12px 30px;
+    background: #4da3ff;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 button:hover {
-    background: #b28d1f;
-    transform: translateY(-3px);
+    background: white;
+    color: #002b55;
 }
 
-/* ============================= */
-/* LINKS */
-/* ============================= */
-
-a {
-    color: #C9A227;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* ============================= */
-/* ANIMACION SCROLL */
-/* ============================= */
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
-
-@media (max-width: 900px) {
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav div a {
-        margin-left: 15px;
-    }
-
-    section {
-        padding: 160px 8% 80px 8%;
-    }
-
-    .glass {
-        padding: 30px;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-}
 /* Responsive */
 @media(max-width:768px) {
     .glass {
