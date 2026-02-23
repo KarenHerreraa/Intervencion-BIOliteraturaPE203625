@@ -11,7 +11,7 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    color: white;
+    color: #ffffff;
     background: #02142b;
 }
 
@@ -24,7 +24,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 20, 60, 0.9);
+    background: rgba(2, 115, 129, 0.9); /* Verde institucional */
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
@@ -35,17 +35,17 @@ nav h1 {
 }
 
 nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     margin-left: 30px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #4da3ff;
+    color: #fc525c; /* Coral */
 }
 
-/* ===== SECTIONS ===== */
+/* ===== SECCIONES ===== */
 section {
     min-height: 100vh;
     display: flex;
@@ -53,24 +53,92 @@ section {
     justify-content: center;
     padding: 140px 10%;
     position: relative;
+    overflow: hidden;
 }
 
-/* ===== FONDOS ===== */
-#inicio::before,
-#sintesis::before {
+/* ===== FONDOS POR SECCIÓN ===== */
+
+/* INICIO - Enseñanza */
+#inicio::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(rgba(0,20,60,0.75), rgba(0,30,80,0.85)),
-    url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=80');
+    background:
+        linear-gradient(rgba(2,115,129,0.85), rgba(3,173,163,0.75)),
+        url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80");
     background-size: cover;
     background-position: center;
     z-index: -1;
 }
 
-/* ===== GLASS CARD ===== */
+/* QUIENES SOMOS - Equipo profesores */
+#quienes-somos::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(3,173,163,0.85), rgba(2,115,129,0.8)),
+        url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* SINTESIS - Enseñanza biología */
+#sintesis::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(2,115,129,0.85), rgba(2,20,43,0.85)),
+        url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* INTERVENCIONES - Materias escolares */
+#intervenciones::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(3,173,163,0.85), rgba(252,82,92,0.75)),
+        url("https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* EVALUACIONES - Evaluación escolar */
+#evaluaciones::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(243,56,41,0.85), rgba(2,115,129,0.8)),
+        url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* ENLACES - Conectividad web */
+#enlaces::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(2,115,129,0.85), rgba(3,173,163,0.8)),
+        url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* ===== TARJETA GLASS ===== */
 .glass {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.12);
     border-radius: 20px;
     padding: 60px;
     backdrop-filter: blur(18px);
@@ -87,7 +155,7 @@ section {
     transform: translateY(0);
 }
 
-/* ===== TITLES ===== */
+/* ===== TITULOS ===== */
 h2 {
     font-family: 'Playfair Display', serif;
     font-size: 38px;
@@ -97,30 +165,29 @@ h2 {
 h3 {
     font-family: 'Playfair Display', serif;
     margin-top: 25px;
-    color: #4da3ff;
+    color: #fc525c; /* Coral */
 }
 
-/* ===== TEXT ===== */
+/* ===== TEXTO ===== */
 p {
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 20px;
 }
 
-/* ===== BUTTON ===== */
+/* ===== BOTONES ===== */
 button {
     padding: 12px 30px;
-    background: #4da3ff;
+    background: #fc525c; /* Coral */
     border: none;
     border-radius: 30px;
-    color: white;
+    color: #ffffff;
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
-    background: white;
-    color: #002b55;
+    background: #03ada3; /* Turquesa */
 }
 
 /* ===== CARDS ===== */
@@ -143,16 +210,16 @@ button:hover {
     justify-content: center;
     padding: 2rem;
     text-decoration: none;
-    color: white;
+    color: #ffffff;
     text-align: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 15px;
     transition: 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.18);
+    background: #03ada3;
 }
 
 /* ===== RESPONSIVE ===== */
