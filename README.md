@@ -23,6 +23,9 @@ Gerardo Rivas Lechuga
 David Suarez Pascal
 Juan Manuel Rodríguez Caso
 
+**Modelos biomatemáticos II**
+
+Gerardo Rivas Lechuga
 
 ## Intervenciones 2026
 
@@ -49,7 +52,11 @@ Equipo 1: David Suarez Pascal
 Equipo 2: Juan Manuel Rodríguez Caso y Paulina Cruz Castañeda
 
 
-
 **Bases celulares**
 
 Israel Muñoz Velasco
+
+
+**Taller**
+
+Gerardo Rivas Lechuga
