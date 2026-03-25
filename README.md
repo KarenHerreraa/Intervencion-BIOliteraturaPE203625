@@ -16,6 +16,7 @@ Erick García Trejo
 Gerardo Rivas Lechuga
 
 [🖼️Presentación de la intervención de Fundamentos de Biología Comparada](https://docs.google.com/presentation/d/1bUrNGeafJh_HjFo2lmiTizTQHFeMZNfjijpbiiMTX90/edit?slide=id.g2f74a4a48c0_1_0#slide=id.g2f74a4a48c0_1)
+
 ### 2026-1
 
 **Historia de la Biología**
@@ -40,6 +41,8 @@ Erick García Trejo
 [🖼️Presentación de la intervención de Fundamentos de Biología Comparada](https://docs.google.com/presentation/d/1bUrNGeafJh_HjFo2lmiTizTQHFeMZNfjijpbiiMTX90/edit?slide=id.g2f74a4a48c0_1_0#slide=id.g2f74a4a48c0_1)
 
 [📚Biblioteca de Fundamentos de Biología Comparada en Zotero](https://www.zotero.org/groups/5866354/biologia2024/tags/FundamentosBiologiaComparada/library)
+
+[ℹ️Infografías](https://drive.google.com/drive/u/0/folders/1UZ_LNzjXHdCNwi9b4gOqD_Qo4C40OTBg)
 
 Presentación de la intervención: Liz y Mar
 
