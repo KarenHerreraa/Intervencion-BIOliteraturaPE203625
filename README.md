@@ -44,7 +44,13 @@ Erick García Trejo
 
 [ℹ️Infografías](https://drive.google.com/drive/u/0/folders/1UZ_LNzjXHdCNwi9b4gOqD_Qo4C40OTBg)
 
-Presentación de la intervención: Liz y Mar
+Encargadas de la presentación de la Intervención: 
+Kenia Lizeth Muñoz Martínez: ## 📬 Contacto
+
+<a href="mailto:lizeth29mart@ciencias.unam.mx">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" width="40" alt="Gmail"/>
+</a>
+Mariana 
 
 
 
