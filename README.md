@@ -45,6 +45,7 @@ Erick García Trejo
 [ℹ️Infografías](https://drive.google.com/drive/u/0/folders/1UZ_LNzjXHdCNwi9b4gOqD_Qo4C40OTBg)
 
 Encargadas de la presentación de la Intervención: 
+
 🔴Kenia Lizeth Muñoz Martínez: 📧 [lizeth29mart@ciancias.unam.mx](mailto:lizeth29mart@ciancias.unam.mx)
 
 
