@@ -19,6 +19,8 @@ Gerardo Rivas Lechuga
 
 ### 2026-1
 
+### 2026-2
+
 **Historia de la Biología**
 
 David Suarez Pascal
