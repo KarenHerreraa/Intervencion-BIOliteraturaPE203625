@@ -7,7 +7,7 @@ La página general de las intervenciones es: https://karenherreraa.github.io/Int
 ## Intervenciones 2025
 ### 2025-2
 
-**Biología Comparada**
+**Fundamentos de Biología Comparada**
 
 Roxana Acosta Gutiérrez
 
@@ -32,7 +32,7 @@ Gerardo Rivas Lechuga
 
 ### 2026-1
 
-**Biología Comparada**
+**Fundamentos de Biología Comparada**
 
 Roxana Acosta Gutiérrez
 
