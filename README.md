@@ -47,7 +47,9 @@ Erick García Trejo
 Encargadas de la presentación de la Intervención: 
 Kenia Lizeth Muñoz Martínez: <a href="mailto:lizeth29mart@ciencias.unam.mx">
   <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" width="40" alt="Gmail"/>
-</a>
+</a> [lizeth29mart@ciancias.unam.mx](mailto:lizeth29mart@ciancias.unam.mx)
+
+
 Mariana 
 
 
