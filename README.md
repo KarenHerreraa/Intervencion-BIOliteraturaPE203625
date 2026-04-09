@@ -9,11 +9,11 @@ La página general de las intervenciones es: https://karenherreraa.github.io/Int
 
 **Fundamentos de Biología Comparada**
 
-Roxana Acosta Gutiérrez
+👩‍🏫Roxana Acosta Gutiérrez
 
-Erick García Trejo
+👨‍🏫Erick García Trejo
 
-Gerardo Rivas Lechuga
+👨‍🏫Gerardo Rivas Lechuga
 
 [🖼️Presentación de la intervención de Fundamentos de Biología Comparada](https://docs.google.com/presentation/d/1bUrNGeafJh_HjFo2lmiTizTQHFeMZNfjijpbiiMTX90/edit?slide=id.g2f74a4a48c0_1_0#slide=id.g2f74a4a48c0_1)
 
@@ -36,9 +36,9 @@ Gerardo Rivas Lechuga
 
 **Fundamentos de Biología Comparada**
 
-Roxana Acosta Gutiérrez
+👩‍🏫Roxana Acosta Gutiérrez
 
-Erick García Trejo
+👨‍🏫Erick García Trejo
 
 [🖼️Presentación de la intervención de Fundamentos de Biología Comparada](https://docs.google.com/presentation/d/14ZbG29rjkCvmi1fsda6WPKKrbNWYUxrUwYMkX0HylJE/edit?slide=id.g3de157f7f7a_0_0#slide=id.g3de157f7f7a_0_0)
 
