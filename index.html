@@ -2,169 +2,673 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto PAPIME PE203625</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto PAPIME PE203625 | Bioliteratura UNAM</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Fuentes e Iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Paleta Okabe-Ito Accesible */
+    :root {
+      --cb-blue: #0072b2;
+      --cb-orange: #e69f00;
+      --cb-teal: #009e73;
+      --cb-bg-darkest: #0e141d;
+      --cb-bg-darker: #17212f;
+      --cb-bg-hover: #222f42;
+      --cb-text-light: #ffffff;
+      --cb-text-muted: #d0d7de;
+      --cb-border: #303e54;
+      --header-height: 80px;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      color: var(--cb-text-light);
+      background-color: var(--cb-bg-darkest);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Header & Navegación */
+    .main-header {
+      background-color: rgba(14, 20, 29, 0.95);
+      height: var(--header-height);
+      position: fixed;
+      z-index: 1000;
+      width: 100%;
+      top: 0;
+      border-bottom: 2px solid var(--cb-blue);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+
+    .logo a {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--cb-text-light);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo a i {
+      color: var(--cb-orange);
+    }
+
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 12px;
+    }
+
+    .main-nav ul li a {
+      color: var(--cb-text-light);
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: background 0.2s ease;
+    }
+
+    .main-nav ul li a:hover {
+      background-color: var(--cb-blue);
+    }
+
+    /* Banner Principal (Hero) */
+    .main-banner {
+      position: relative;
+      padding-top: calc(var(--header-height) + 70px);
+      padding-bottom: 110px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(14, 20, 29, 0.85) 0%, rgba(14, 20, 29, 0.98) 100%),
+        url("https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1920&q=80") center/cover no-repeat fixed;
+    }
+
+    .banner-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .banner-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--cb-blue);
+      color: var(--cb-text-light);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .banner-content h1 {
+      font-size: 34px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: var(--cb-text-light);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+      line-height: 1.3;
+    }
+
+    .banner-content p {
+      color: var(--cb-text-muted);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .banner-actions {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-action {
+      background-color: var(--cb-blue);
+      color: var(--cb-text-light);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+
+    .btn-action:hover {
+      background-color: #005a8d;
+      transform: translateY(-2px);
+    }
+
+    .btn-action-alt {
+      background-color: transparent;
+      border: 2px solid var(--cb-orange);
+      color: var(--cb-orange);
+    }
+
+    .btn-action-alt:hover {
+      background-color: var(--cb-orange);
+      color: var(--cb-text-light);
+    }
+
+    /* Secciones Generales */
+    .section {
+      padding: 60px 0;
+    }
+
+    .container {
+      max-width: 1350px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+      font-size: 28px;
+      color: var(--cb-text-light);
+      display: inline-block;
+      border-bottom: 3px solid var(--cb-orange);
+      padding-bottom: 8px;
+    }
+
+    /* Tarjetas Modulares */
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    .module-card {
+      background-color: var(--cb-bg-darker);
+      border: 1px solid var(--cb-border);
+      border-radius: 8px;
+      padding: 28px;
+      border-top: 4px solid var(--cb-orange);
+    }
+
+    .module-card h3, .module-card h4 {
+      color: var(--cb-orange);
+      font-size: 18px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .module-card p {
+      font-size: 14px;
+      color: var(--cb-text-muted);
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+
+    /* Tablas Estilizadas */
+    .table-container {
+      background-color: var(--cb-bg-darker);
+      border-radius: 8px;
+      border: 1px solid var(--cb-border);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    thead {
+      background-color: var(--cb-blue);
+      color: var(--cb-text-light);
+    }
+
+    th {
+      padding: 16px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    td {
+      padding: 16px;
+      border-bottom: 1px solid var(--cb-border);
+      vertical-align: top;
+      color: var(--cb-text-muted);
+    }
+
+    tr:hover {
+      background-color: var(--cb-bg-hover);
+    }
+
+    .badge-prof {
+      display: inline-block;
+      background-color: rgba(0, 158, 115, 0.15);
+      color: var(--cb-teal);
+      border: 1px solid var(--cb-teal);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 2px 0;
+    }
+
+    /* Grilla de Enlaces / Recursos */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      width: 100%;
+    }
+
+    .tool-card {
+      background: var(--cb-bg-darker);
+      border: 1px solid var(--cb-border);
+      border-radius: 8px;
+      padding: 22px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tool-card:hover {
+      border-color: var(--cb-blue);
+      background-color: var(--cb-bg-hover);
+      transform: translateY(-4px);
+    }
+
+    .tool-card i {
+      font-size: 32px;
+      color: var(--cb-orange);
+      margin-bottom: 12px;
+    }
+
+    .tool-card p {
+      color: var(--cb-text-light);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .tool-card span {
+      display: block;
+      font-size: 12px;
+      color: var(--cb-text-muted);
+      margin-top: 5px;
+    }
+
+    /* Widget Mastodon */
+    .mastodon-container {
+      background-color: var(--cb-bg-darker);
+      border: 1px solid var(--cb-border);
+      border-radius: 8px;
+      padding: 25px;
+    }
+
+    .mastodon-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .mastodon-header h3 {
+      font-size: 18px;
+      color: var(--cb-orange);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mastodon-feed-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-height: 450px;
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+
+    .toot-card {
+      background-color: var(--cb-bg-darkest);
+      border: 1px solid var(--cb-border);
+      border-radius: 6px;
+      padding: 16px;
+    }
+
+    .toot-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .toot-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--cb-orange);
+    }
+
+    .toot-author-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--cb-text-light);
+      display: block;
+    }
+
+    .toot-author-handle {
+      font-size: 12px;
+      color: var(--cb-text-muted);
+    }
+
+    .toot-content {
+      font-size: 13px;
+      color: var(--cb-text-muted);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .toot-footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--cb-text-muted);
+      border-top: 1px solid var(--cb-border);
+      padding-top: 8px;
+    }
+
+    .toot-footer a {
+      color: var(--cb-orange);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      background-color: var(--cb-bg-darkest);
+      padding: 30px 0;
+      text-align: center;
+      border-top: 1px solid var(--cb-border);
+      color: var(--cb-text-muted);
+      font-size: 13px;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <h1>Proyecto PAPIME PE203625</h1>
-        <div>
-            <a href="#inicio">Inicio</a>
-            <a href="#intervenciones">Intervenciones</a>
-            <a href="#evaluaciones">Evaluaciones</a>
-            <a href="#enlaces">Enlaces</a>
-        </div>
-    </nav>
-</header>
-
-<!-- INICIO -->
-<section id="inicio">
-    <div class="glass">
-        <h2>Competencias para la Enseñanza-Aprendizaje de Bioliteratura: Una Intervención Estratégica</h2>
-        <p>Proyecto académico orientado al desarrollo de competencias informacionales.</p>
-
-        <button onclick="document.getElementById('intervenciones').scrollIntoView({behavior:'smooth'})">
-            Ver Intervenciones
-        </button>
-
-        <button onclick="document.getElementById('evaluaciones').scrollIntoView({behavior:'smooth'})" style="margin-left:15px;">
-            Ver Evaluaciones
-        </button>
-    </div>
-</section>
-
-<!-- QUIENES SOMOS -->
-<section id="quienes-somos">
-    <div class="glass">
-        <h2>¿Quiénes somos?</h2>
-
-        <p>
-            Somos un grupo de profesores interesados en la biología, la literatura y las tecnologías computacionales,
-            y consideramos que su integración constituye una vía eficaz para potenciar la educación.
-        </p>
-
-        <p>
-            En este contexto, proponemos un proyecto educativo orientado a fortalecer competencias informacionales
-            en estudiantes de biología, mediante recursos digitales y estrategias didácticas basadas en ocho
-            características esenciales de la literatura científica.
-        </p>
-    </div>
-</section>
-
-<!-- SINTESIS -->
-<section id="sintesis">
-    <div class="glass">
-        <h2>Síntesis</h2>
-
-        <p>
-            En los planes de estudio vigentes de Biología en la UNAM existen dos componentes clave que aplican los profesores
-            en el proceso de enseñanza-aprendizaje: las estrategias didácticas y la evaluación del aprendizaje.
-        </p>
-
-        <p>
-            Para ambas se requiere que los alumnos indispensable y obligatoriamente consulten fuentes de calidad,
-            bibliografía especializada en la Web, revisen la literatura científica e incluyan referencias y citas.
-        </p>
-
-        <p>
-            Esto representa un reto importante: los estudiantes se enfrentan por primera vez al empleo de literatura especializada,
-            carecen de un curso formal sobre el tema y en ninguna materia se abordan sistemáticamente los contenidos fundamentales
-            para identificar fuentes de calidad, utilizar bases de datos, conocer revistas científicas o generar citas y referencias.
-        </p>
-
-        <p>
-            Para contrarrestar esta debilidad, proponemos un proyecto innovador que integra enseñanza, TIC, biología e información,
-            enfocado en crear estrategias didácticas y recursos digitales sobre ocho características básicas de la literatura biológica
-            (bioliteratura), con el objetivo de desarrollar competencias informáticas e informacionales clave en los futuros biólogos.
-        </p>
-    </div>
-</section>
-
-<!-- INTERVENCIONES -->
-<section id="intervenciones">
-    <div class="glass">
-        <h2>Intervenciones</h2>
-
-        <h3>Semestre 2025-2 | Biología Comparada</h3>
-        <p><strong>Profesores:</strong> Roxana Acosta Gutiérrez, Erick García Trejo, Gerardo Rivas Lechuga</p>
-
-        <h3>Semestre 2026-1</h3>
-        <p><strong>Historia de la Biología:</strong> David Suarez Pascal, Juan Manuel Rodríguez Caso</p>
-        <p><strong>Biología Comparada:</strong> Roxana Acosta Gutiérrez, Erick García Trejo, Gerardo Rivas Lechuga</p>
-        <p><strong>Bases Celulares:</strong> Israel Muñoz Velasco</p>
-    </div>
-</section>
-
-<!-- EVALUACIONES -->
-<section id="evaluaciones">
-    <div class="glass">
-        <h2>Evaluaciones</h2>
-
-        <h3>Biología Comparada</h3>
-        <p>Evaluaciones a cargo de: Roxana Acosta Gutiérrez, Erick García Trejo, Gerardo Rivas Lechuga</p>
-
-        <h3>Historia de la Biología</h3>
-        <p>Evaluaciones a cargo de: David Suarez Pascal, Juan Manuel Rodríguez Caso</p>
-
-        <h3>Bases Celulares</h3>
-        <p>Evaluaciones a cargo de: Israel Muñoz Velasco</p>
-
-        <p style="margin-top:30px;">
-            (Enlaces a instrumentos de evaluación serán incorporados próximamente.)
-        </p>
-    </div>
-</section>
-
-<!-- ENLACES -->
-<section id="enlaces">
-    <div class="glass">
-        <h2>Enlaces</h2>
-
-        <ul class="card-list">
-            <li>
-                <a href="https://docs.google.com/" target="_blank" class="card">
-                    Presentación Bioliteratura PAPIME
-                </a>
-            </li>
-
-            <li>
-                <a href="https://biogarabatos.blogspot.com/search/label/PAPIME%2FUNAM%2FPE203625" target="_blank" class="card">
-                    Blog Biogarabatos
-                </a>
-            </li>
-
-            <li>
-                <a href="https://hypothes.is/users/lmichan?q=BioliteraturaPE203625" target="_blank" class="card">
-                    Anotaciones en Hypothes.is #BioliteraturaPE203625
-                </a>
-            </li>
-
-            <li>
-                <a href="https://www.innovacioneducativa.unam.mx:8443/jspui/" target="_blank" class="card">
-                    Repositorio de Innovación Educativa PE203625
-                </a>
-            </li>
-
-            <li>
-                <a href="https://mstdn.social/tags/PE203625" target="_blank" class="card">
-                    Etiqueta Mastodon
-                </a>
-            </li>
+  <!-- Header Dinámico -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="#inicio"><i class="fas fa-dna"></i> Proyecto PAPIME PE203625</a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#quienes-somos">¿Quiénes somos?</a></li>
+          <li><a href="#sintesis">Síntesis</a></li>
+          <li><a href="#intervenciones">Intervenciones</a></li>
+          <li><a href="#evaluaciones">Evaluaciones</a></li>
+          <li><a href="#enlaces">Enlaces</a></li>
         </ul>
+      </nav>
     </div>
-</section>
+  </header>
 
-<script src="script.js"></script>
+  <!-- Banner Principal -->
+  <section class="main-banner" id="inicio">
+    <div class="banner-content">
+      <span class="banner-badge"><i class="fas fa-university"></i> UNAM • DGAPA • PAPIME</span>
+      <h1>Competencias para la Enseñanza-Aprendizaje de Bioliteratura: Una Intervención Estratégica</h1>
+      <p>
+        Proyecto académico e innovador para el desarrollo e integración de competencias informacionales y digitales en el área de las Ciencias Biológicas.
+      </p>
+      <div class="banner-actions">
+        <button class="btn-action" onclick="document.getElementById('intervenciones').scrollIntoView({behavior:'smooth'})">
+          <i class="fas fa-chalkboard-teacher"></i> Ver Intervenciones
+        </button>
+        <button class="btn-action btn-action-alt" onclick="document.getElementById('evaluaciones').scrollIntoView({behavior:'smooth'})">
+          <i class="fas fa-tasks"></i> Ver Evaluaciones
+        </button>
+      </div>
+    </div>
+  </section>
 
+  <div class="container" style="display: flex; flex-direction: column; gap: 50px; margin-top: 50px;">
+
+    <!-- Secciones ¿Quiénes somos? y Síntesis -->
+    <section class="module-grid" id="quienes-somos">
+      <div class="module-card">
+        <h3><i class="fas fa-users"></i> ¿Quiénes somos?</h3>
+        <p>
+          Somos un grupo de profesores interesados en la biología, la literatura y las tecnologías computacionales. Consideramos que su integración constituye una vía eficaz para potenciar la educación académica.
+        </p>
+        <p>
+          Proponemos un proyecto educativo orientado a fortalecer las competencias informacionales en estudiantes de biología mediante recursos digitales y estrategias didácticas estructuradas.
+        </p>
+      </div>
+
+      <div class="module-card" id="sintesis">
+        <h3><i class="fas fa-book-reader"></i> Síntesis del Proyecto</h3>
+        <p>
+          En la UNAM, las estrategias didácticas y la evaluación requieren que los alumnos consulten literatura científica de calidad. Sin embargo, la falta de cursos formales sobre el uso sistemático de bases de datos y citación representa un reto importante[cite: 1].
+        </p>
+        <p>
+          Integrando TIC y biología, abordamos 8 características clave de la literatura biológica (bioliteratura) para consolidar el perfil profesional de los futuros biólogos[cite: 1].
+        </p>
+      </div>
+    </section>
+
+    <!-- Intervenciones Docentes -->
+    <section class="section" id="intervenciones" style="padding: 0;">
+      <div class="section-heading">
+        <h2>Intervenciones Académicas</h2>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Semestre</th>
+              <th>Asignatura</th>
+              <th>Profesores Participantes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>2025-2</strong></td>
+              <td><strong>Biología Comparada</strong></td>
+              <td>
+                <span class="badge-prof">Roxana Acosta Gutiérrez</span>
+                <span class="badge-prof">Erick García Trejo</span>
+                <span class="badge-prof">Gerardo Rivas Lechuga</span>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="3"><strong>2026-1</strong></td>
+              <td><strong>Historia de la Biología</strong></td>
+              <td>
+                <span class="badge-prof">David Suarez Pascal</span>
+                <span class="badge-prof">Juan Manuel Rodríguez Caso</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Biología Comparada</strong></td>
+              <td>
+                <span class="badge-prof">Roxana Acosta Gutiérrez</span>
+                <span class="badge-prof">Erick García Trejo</span>
+                <span class="badge-prof">Gerardo Rivas Lechuga</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Bases Celulares</strong></td>
+              <td>
+                <span class="badge-prof">Israel Muñoz Velasco</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Evaluaciones -->
+    <section class="section" id="evaluaciones" style="padding: 0;">
+      <div class="section-heading">
+        <h2>Evaluaciones por Asignatura</h2>
+      </div>
+      <div class="module-grid">
+        <div class="module-card">
+          <h4><i class="fas fa-microscope"></i> Biología Comparada</h4>
+          <p><strong>Evaluadores:</strong> Roxana Acosta Gutiérrez, Erick García Trejo, Gerardo Rivas Lechuga[cite: 1].</p>
+          <small style="color: var(--cb-text-muted);"><i class="fas fa-clock"></i> Instrumentos en actualización[cite: 1].</small>
+        </div>
+        <div class="module-card">
+          <h4><i class="fas fa-history"></i> Historia de la Biología</h4>
+          <p><strong>Evaluadores:</strong> David Suarez Pascal, Juan Manuel Rodríguez Caso[cite: 1].</p>
+          <small style="color: var(--cb-text-muted);"><i class="fas fa-clock"></i> Instrumentos en actualización[cite: 1].</small>
+        </div>
+        <div class="module-card">
+          <h4><i class="fas fa-vial"></i> Bases Celulares</h4>
+          <p><strong>Evaluador:</strong> Israel Muñoz Velasco[cite: 1].</p>
+          <small style="color: var(--cb-text-muted);"><i class="fas fa-clock"></i> Instrumentos en actualización[cite: 1].</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recurso Dinámico: Feed Mastodon -->
+    <section class="section" id="mastodon-section" style="padding: 0;">
+      <div class="mastodon-container">
+        <div class="mastodon-header">
+          <h3><i class="fab fa-mastodon"></i> Actualizaciones Mastodon (#PE203625)</h3>
+        </div>
+        <div class="mastodon-feed-list" id="mastodonFeed">
+          <p style="text-align: center; color: var(--cb-text-muted); padding: 20px;">Cargando publicaciones recientes del proyecto...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enlaces Principales -->
+    <section class="section" id="enlaces" style="padding: 0;">
+      <div class="section-heading">
+        <h2>Enlaces y Recursos Digitales</h2>
+      </div>
+      <div class="tools-grid">
+        <a href="https://docs.google.com/" target="_blank" class="tool-card">
+          <i class="fas fa-file-powerpoint"></i>
+          <p>Presentación Bioliteratura</p>
+          <span>Material PAPIME</span>
+        </a>
+        <a href="https://biogarabatos.blogspot.com/search/label/PAPIME%2FUNAM%2FPE203625" target="_blank" class="tool-card">
+          <i class="fas fa-blog"></i>
+          <p>Blog Biogarabatos</p>          <span>Etiqueta PAPIME/UNAM</span>
+        </a>
+        <a href="https://hypothes.is/users/lmichan?q=BioliteraturaPE203625" target="_blank" class="tool-card">
+          <i class="fas fa-highlighter"></i>
+          <p>Hypothes.is</p>
+          <span>Anotaciones compartidas</span>
+        </a>
+        <a href="https://www.innovacioneducativa.unam.mx:8443/jspui/" target="_blank" class="tool-card">
+          <i class="fas fa-archive"></i>
+          <p>Repositorio Innovación</p>
+          <span>Recursos PE203625</span>
+        </a>
+        <a href="https://mstdn.social/tags/PE203625" target="_blank" class="tool-card">
+          <i class="fab fa-mastodon"></i>
+          <p>Etiqueta Mastodon</p>
+          <span>Comunidad #PE203625</span>
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer style="margin-top: 60px;">
+    <div class="container">
+      <p>Proyecto PAPIME PE203625: "Competencias para la enseñanza-aprendizaje de bioliteratura: Una intervención estratégica" • UNAM</p>
+    </div>
+  </footer>
+
+  <!-- Script para Mastodon Dinámico -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      loadMastodonFeed();
+    });
+
+    async function loadMastodonFeed() {
+      const container = document.getElementById("mastodonFeed");
+      try {
+        const response = await fetch("https://mstdn.social/api/v1/timelines/tag/PE203625?limit=5");
+        if (!response.ok) throw new Error("Error en la petición");
+        const toots = await response.json();
+
+        if (!toots || toots.length === 0) {
+          container.innerHTML = `<p style="text-align: center; color: var(--cb-text-muted); padding: 20px;">No hay publicaciones recientes con la etiqueta #PE203625.</p>`;
+          return;
+        }
+
+        container.innerHTML = "";
+        toots.forEach((toot) => {
+          const date = new Date(toot.created_at).toLocaleDateString("es-MX", { day: "numeric", month: "short", year: "numeric" });
+          const tootHtml = `
+            <div class="toot-card">
+              <div class="toot-header">
+                <img src="${toot.account.avatar}" alt="Avatar" class="toot-avatar" />
+                <div>
+                  <span class="toot-author-name">${toot.account.display_name || toot.account.username}</span>
+                  <span class="toot-author-handle">@${toot.account.acct}</span>
+                </div>
+              </div>
+              <div class="toot-content">${toot.content}</div>
+              <div class="toot-footer">
+                <span>📅 ${date}</span>
+                <a href="${toot.url}" target="_blank"><i class="fab fa-mastodon"></i> Ver publicación</a>
+              </div>
+            </div>
+          `;
+          container.insertAdjacentHTML("beforeend", tootHtml);
+        });
+      } catch (err) {
+        container.innerHTML = `<p style="text-align: center; color: var(--cb-text-muted); padding: 20px;">No se pudo cargar el feed de Mastodon.</p>`;
+      }
+    }
+  </script>
 </body>
+
 </html>
