@@ -66,6 +66,7 @@ Equipo 2: Juan Manuel Rodríguez Caso y Paulina Cruz Castañeda
 **Bases celulares**
 
 Israel Muñoz Velasco
+Karen Herrera Escamilla
 
 
 **Taller**
